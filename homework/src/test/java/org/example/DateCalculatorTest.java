@@ -13,7 +13,7 @@ public class DateCalculatorTest {
     private DateCalculator dateCalculator;
 
     // 테스트 클래스가 실행될 때마다 매번 실행되는 메서드
-    // 매번 새로운 객체 생성
+    // 각 테스트들을 실행 하기 전 매번 새로운 객체 생성 => 초기화 하는 과정
     @BeforeEach
     void setup(){
         dateCalculator = new DateCalculator();
@@ -24,6 +24,7 @@ public class DateCalculatorTest {
         LocalDate birthDate = LocalDate.of(2001,9,30);
         LocalDate currentDate = LocalDate.of(2024,3,18);
 
+        //int expectedAge = 24;
         int expectedAge = 23;
         int actualAge = dateCalculator.calculateAge(birthDate, currentDate);
         assertEquals(expectedAge, actualAge);
