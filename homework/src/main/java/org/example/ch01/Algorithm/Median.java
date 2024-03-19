@@ -18,7 +18,6 @@ public class Median {
             return c;
         else return b;
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
